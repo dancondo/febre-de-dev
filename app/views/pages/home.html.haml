@@ -1,4 +1,36 @@
-.banner
-    .banner-content
-        %h1 
-            Febre de Dev
+.banner{ style: "background-image: linear-gradient(360deg, rgba(0,0,0,0.4) 75%, rgba(0,0,0,0.3) 100%), url(#{image_path('banner.jpg')})" }
+    .container-fluid
+        .row
+            .col-sm-6.text-white.bg-dark.rounded-right
+                .row.py-3 
+                    .col-sm-9.offset-sm-3.py-3
+                        %h1.font-weight-bold.text-uppercase
+                            Febre de Dev 
+                        %p.h4
+                            Ajudando sua Startup a Ingressar no Mundo Tech 
+                        .py-2
+                            .btn.btn-light
+                                Ler Posts
+                            .btn.btn-info
+                                Inscrever
+.bg-dark.py-3
+    .container
+        %h4.text-center.text-uppercase.text-white.my-3.pt-3.font-weight-bold
+            Aprenda como definir sua estrategia para conseguir encontrar os melhores talentos para seu negocio
+        .row.text-center.py-3
+            .col-sm-4
+                = image_tag 'event.png'
+                %p.text-white.pt-3.mt-3 
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            .col-sm-4
+                = image_tag 'sand-clock.png'
+                %p.text-white.pt-3.mt-3 
+                    Sed iaculis mi ipsum, non facilisis tortor ultrices et. Integer at mauris et arcu semper tincidunt.
+            .col-sm-4
+                = image_tag 'startup.png'
+                %p.text-white.pt-3.mt-3 
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit ultrices et.
+
+.container.py-3.my-3
+    %h3.text-center.text-uppercase.font-weight-bold
+        Ultimos Artigos

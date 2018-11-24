@@ -1,21 +1,28 @@
-%h2 Sign up
-= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
-  = f.error_notification
-  .form-inputs
-    = f.input :email,                       
-      required: true,                       
-      autofocus: true ,                     
-      input_html: { autocomplete: "email" } 
-    = f.input :username,                       
-      required: true,                          
-      input_html: { autocomplete: "username" } 
-    = f.input :password,                                                                    
-      required: true,                                                                       
-      hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length), 
-      input_html: { autocomplete: "new-password" }                                          
-    = f.input :password_confirmation,              
-      required: true,                              
-      input_html: { autocomplete: "new-password" } 
-  .form-actions
-    = f.button :submit, "Sign up"
-= render "devise/shared/links"
+.row.justify-content-center.align-content-center{ style:"height:100vh;"}
+  .card{style:"width:50%;background-color:#ffffff80"}
+    .card-body
+      %h2 Sign up
+      = simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+        = f.error_notification
+        .form-inputs
+          = f.input :email,                       
+            required: true,                     
+            autofocus: true ,
+            placeholder: 'user@domain.com',
+            input_html: { autocomplete: "email" } 
+          = f.input :username,                       
+            required: true,
+            placeholder: 'username',
+            input_html: { autocomplete: "username" } 
+          = f.input :password,                                                                    
+            required: true,
+            placeholder: '********* ',
+            hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length), 
+            input_html: { autocomplete: "new-password" }                                          
+          = f.input :password_confirmation,              
+            required: true, 
+            placeholder: '********* ',
+            input_html: { autocomplete: "new-password" } 
+        .form-actions
+          = f.button :submit, "Sign up"
+          = render "devise/shared/links"

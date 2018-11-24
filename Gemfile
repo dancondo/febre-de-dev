@@ -26,6 +26,7 @@ gem 'devise'
 gem 'bootstrap'
 gem 'rails-ujs'
 gem 'simple_form'
+gem 'haml-rails'
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'

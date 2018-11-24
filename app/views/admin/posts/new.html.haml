@@ -1,3 +1,4 @@
 %h1 Admin::Posts#new
 %p Find me in app/views/admin/posts/new.html.erb
- 
+= simple_form_for @post, url: admin_posts_path do |f| 
+    = render partial: 'form', locals: { f: f }

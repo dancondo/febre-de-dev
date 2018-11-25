@@ -1,6 +1,6 @@
 .navbar-dev.d-flex.align-items-center.bg-white.justify-content-between.px-4.fixed-top
   = link_to root_path, class: "navbar-dev-brand" do
-    %h2 Febre de Dev
+    %h2.navbar-title Febre de Dev
   .navbar-dev-right.d-flex
     = link_to "Posts", posts_path, class: "px-3 navbar-dev-link"
     = link_to t(".sign_in", default: "Login"), new_user_session_path, class: "px-3 navbar-dev-link"
